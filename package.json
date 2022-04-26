@@ -1,10 +1,10 @@
 {
   "scripts": {
-    "terraform:init": "terraform init",
-    "terraform:validate": "env-path -p ./.env terraform validate",
-    "terraform:plan": "env-path -p ./.env terraform plan",
-    "terraform:apply": "env-path -p ./.env terraform apply",
-    "terraform:destroy": "env-path -p ./.env terraform destroy"
+    "terraform:init": "terraform -chdir=./terraform init",
+    "terraform:validate": "env-path -p ./.env terraform -chdir=./terraform validate",
+    "terraform:plan": "env-path -p ./.env terraform -chdir=./terraform plan",
+    "terraform:apply": "env-path -p ./.env terraform -chdir=./terraform apply",
+    "terraform:destroy": "env-path -p ./.env terraform -chdir=./terraform destroy"
   },
   "dependencies": {
     "env-path": "^1.0.7"
